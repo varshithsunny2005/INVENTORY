@@ -229,7 +229,7 @@ Access application at: `http://localhost:3000`
 ---
 
 ##  Author
-**Sitra Vishnu Bhargav**  
+**POGULA VARSHITH GOUD**  
 Final-year CSE, IIIT Jabalpur  
 [GitHub](https://github.com/varshithsunny2005/INVENTORY) • [LinkedIn](https://www.linkedin.com/in/varshith-goud-43968b317)
 
