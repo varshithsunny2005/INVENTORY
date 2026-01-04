@@ -1,237 +1,176 @@
-#  InventX – Inventory Management System (MERN Stack)
+InventX – Inventory Management System (MERN Stack)
 
-[![Frontend – Vercel](https://vercelbadge.vercel.app/api/bhargavzz/InventX)](https://inventx-alpha.vercel.app)
-[![Backend – Render](https://img.shields.io/badge/Backend-Live-green?style=flat&logo=render)](https://inventx-backend-g2tg.onrender.com/api/health)
-[![Backend Deployment Status](https://github.com/Bhargavzz/InventX/actions/workflows/deploy-backend.yml/badge.svg)](https://github.com/Bhargavzz/InventX/actions/workflows/deploy-backend.yml)
+InventX is a full-stack inventory management web application that helps users track products, monitor stock, and manage inventory in real time. The application supports secure authentication, product management, cloud-based image uploads, and a responsive analytics dashboard, following scalable and modular design principles.
 
+🛠️ Tech Stack
+🔹 Backend
 
+Node.js, Express.js
 
-**InventX** is a full-stack inventory management web application that helps users track products, monitor stock, and manage warehouses in real-time. It supports role-based access, secure authentication, and cloud image uploads — designed with scalability, validation, and modular architecture in mind.
+MongoDB with Mongoose
 
----
+JWT Authentication, Bcrypt
 
-##  Tech Stack
+HttpOnly Cookies for secure sessions
 
-###  Backend
-- **Node.js**, **Express.js**
-- **MongoDB** with Mongoose
-- **JWT Auth**, **Bcrypt**, **Cookie-based Sessions**
-- **Cloudinary** for image hosting
-- **Zod** for schema validation
-- **Nodemailer** for contact/reset email flows
+Cloudinary for image hosting
 
-###  Frontend
-- **React.js** with Hooks
-- **Redux Toolkit** for state management
-- **React Router** for routing
-- **React Quill** for rich product descriptions
-- **React Toastify** for notifications
-- **SCSS Modules** for scoped styling
-- **Zod** client-side validation
+Zod for schema validation
 
----
+Nodemailer for email workflows
 
-##  Features
+🔹 Frontend
 
-###  Authentication
-- Secure Register/Login/Logout
-- JWT + HttpOnly cookie-based auth
-- Password hashing (bcrypt)
-- Forgot/reset password (with email token)
-- Protected routes with `HiddenLink` component
+React.js with Hooks
 
-###  Product Management
-- Add/edit/delete/view products
-- Product image upload via Cloudinary
-- Rich text descriptions (React Quill)
-- SKU auto-generation (timestamp-based)
-- View product details with created/updated timestamps
-- Product filtering and search
+Redux Toolkit for state management
 
-###  Dashboard Analytics
-- Total inventory value calculation
-- Out-of-stock product alerts
-- Category distribution tracking
-- Responsive product summary cards
+React Router for routing
 
-###  Contact Form
-- Send messages to admin (Nodemailer-powered)
+React Quill for rich text descriptions
 
----
+React Toastify for notifications
 
-## 📁 Clean Project Structure
+SCSS Modules for styling
 
-```
-Bhargavzz-InventX/
-├── 📄 README.md
-├── 📄 .gitattributes
-├── 📂 backend/
-│   ├── 📄 package.json
-│   ├── 📄 server.js
-│   ├── 📄 .gitignore
-│   ├── 📂 controllers/
-│   │   ├── contactController.js
-│   │   ├── productController.js
-│   │   └── userController.js
-│   ├── 📂 middleWare/
-│   │   ├── authMiddleware.js
-│   │   └── errorMiddleware.js
-│   ├── 📂 models/
-│   │   ├── productModel.js
-│   │   └── userModel.js
-│   ├── 📂 routes/
-│   │   ├── contactRoute.js
-│   │   ├── productRoute.js
-│   │   └── userRoute.js
-│   ├── 📂 uploads/
-│   │   └── .gitkeep
-│   └── 📂 utils/
-│       ├── fileUpload.js    # Cloudinary integration
-│       └── sendEmail.js     # Nodemailer configuration
-└── 📂 frontend/
-    ├── 📄 package.json
-    ├── 📄 .gitignore
-    ├── 📂 public/
-    │   ├── index.html
-    │   └── manifest.json
-    └── 📂 src/
-        ├── App.js
-        ├── index.js
-        ├── 📂 components/
-        │   ├── card/                # Reusable card
-        │   ├── changePassword/      # Password update
-        │   ├── footer/              # App footer
-        │   ├── header/              # Navigation
-        │   ├── infoBox/             # Dashboard metrics
-        │   ├── layout/              # Layout wrapper
-        │   ├── loader/              # Loading indicators
-        │   ├── product/             # Product components
-        │   ├── protect/             # Auth protection
-        │   ├── search/              # Search
-        │   └── sidebar/             # Navigation
-        ├── 📂 customHook/
-        │   └── useRedirectLoggedOutUser.js
-        ├── 📂 data/
-        │   └── sidebar.js
-        ├── 📂 pages/
-        │   ├── addProduct/          # Add product
-        │   ├── auth/                # Auth pages
-        │   ├── contact/             # Contact
-        │   ├── dashboard/           # Dashboard
-        │   ├── editProduct/         # Edit product
-        │   ├── Home/                # Home
-        │   └── profile/             # Profile
-        ├── 📂 redux/
-        │   ├── store.js
-        │   └── features/            # Redux slices
-        ├── 📂 schemas/              # Validation
-        └── 📂 services/             # API services
-```
+Zod for client-side validation
 
-### Key Component Details
-- **Product Components**: 
-  - `productDetail/` - Single product view
-  - `productForm/` - Add/edit form
-  - `productList/` - Listing table
-  - `productSummary/` - Inventory cards
-  
-- **Redux Structure**:
-  - `auth/` - Authentication slice
-  - `product/` - Product state + filters
+✨ Features
+🔐 Authentication
 
----
+Secure user registration and login
 
-##  Environment Variables
+JWT-based authentication with HttpOnly cookies
 
-### Backend `.env` (create in `/backend`)
-```env
+Password hashing using bcrypt
+
+Forgot and reset password functionality
+
+Protected routes for authenticated users
+
+📦 Product Management
+
+Add, edit, delete, and view products
+
+Upload product images using Cloudinary
+
+Rich text product descriptions
+
+Automatic SKU generation
+
+Product filtering and search functionality
+
+📊 Dashboard Analytics
+
+Total inventory value calculation
+
+Out-of-stock alerts
+
+Category-wise product distribution
+
+Responsive analytics cards
+
+📧 Contact Form
+
+Contact admin via email using Nodemailer
+
+📁 Project Structure
+INVENTORY/
+├── README.md
+├── backend/
+│   ├── package.json
+│   ├── server.js
+│   ├── controllers/
+│   ├── middleWare/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   └── uploads/
+└── frontend/
+    ├── package.json
+    ├── public/
+    └── src/
+        ├── components/
+        ├── pages/
+        ├── redux/
+        ├── schemas/
+        └── services/
+
+🔐 Environment Variables
+Backend (/backend/.env)
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email_address
 EMAIL_PASS=your_email_password
-EMAIL_HOST=smtp_provider_host
+EMAIL_HOST=smtp.gmail.com
 FRONTEND_URL=http://localhost:3000
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-```
 
-### Frontend `.env` (create in `/frontend`)
-```env
+Frontend (/frontend/.env)
 REACT_APP_BACKEND_URL=http://localhost:5000
-```
 
----
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/varshithsunny2005/INVENTORY.git
+cd INVENTORY
 
-## 🛠️ Getting Started
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/Bhargavzz/InventX.git
-cd Bhargavzz-InventX
-```
-
-### 2. Install Dependencies
-```bash
-# Backend setup
+2️⃣ Install Dependencies
+# Backend
 cd backend
 npm install
 
-# Frontend setup
+# Frontend
 cd ../frontend
 npm install
-```
 
-### 3. Start Development Servers
-```bash
-# Run backend
-cd backend && npm run dev
+3️⃣ Run the Application
+# Start backend
+cd backend
+npm start
 
-# Run frontend
-cd ../frontend && npm start
-```
-Access application at: `http://localhost:3000`
+# Start frontend (new terminal)
+cd ../frontend
+npm start
 
----
 
-##  Key Implementation Highlights
+Open:
 
-1. **Security**:
-   - HttpOnly cookies for JWT storage
-   - Password hashing with bcrypt
-   - Protected routes with auth middleware
+http://localhost:3000
 
-2. **Data Flow**:
-   - Redux Toolkit for state management
-   - React hooks for component logic
-   - Custom hooks like `useRedirectLoggedOutUser`
+🧠 Key Highlights
 
-3. **Validation**:
-   - Zod schemas on both client and server
-   - Consistent validation rules across layers
+Secure authentication using JWT and cookies
 
-4. **Integrations**:
-   - Cloudinary for image uploads
-   - Nodemailer for email notifications
-   - React Quill for rich text editing
+Centralized state management with Redux Toolkit
 
----
+Cloud-based image uploads using Cloudinary
 
-##  Future Improvements
-- Role-based access control
-- Bulk CSV import/export
-- Unit/Integration testing
-- Docker containerization
-- PDF report generation
-- ElasticSearch integration
+Robust validation using Zod (frontend & backend)
 
----
+Modular and scalable MERN architecture
 
-##  Author
-**POGULA VARSHITH GOUD**  
-Final-year CSE, IIIT Jabalpur  
-[GitHub](https://github.com/varshithsunny2005/INVENTORY) • [LinkedIn](https://www.linkedin.com/in/varshith-goud-43968b317)
+🔮 Future Enhancements
 
----
+Role-based access control
 
+Bulk product import/export
+
+Automated testing
+
+Docker containerization
+
+Report generation
+
+Advanced search integration
+
+👤 Author
+
+Pogula Varshith Goud
+Final Year B.Tech (CSE), IIIT Jabalpur
+
+GitHub: https://github.com/varshithsunny2005
+
+LinkedIn: https://www.linkedin.com/in/varshith-goud-43968b317
