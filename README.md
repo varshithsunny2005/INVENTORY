@@ -142,7 +142,7 @@ http://localhost:3000
 
 🧠 Key Highlights
 
-Secure authentication using JWT and cookies
+Secure authentication using JWT and cookie
 
 Centralized state management with Redux Toolkit
 
